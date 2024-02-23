@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:padding="40sp">
 
-    <SurfaceView
+    <com.example.myapplication.Face
         android:id="@+id/faceDisplaySurfaceView"
         android:layout_width="match_parent"
         android:layout_height="200sp"
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:textColor="#ff0000"
-                android:text="Red: 0"/>
+                android:text="Red: Color"/>
 
             <SeekBar
                 android:id="@+id/redSeekBar"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:textColor="#008000"
-                android:text="Green: 0"/>
+                android:text="Green: Color"/>
             <SeekBar
                 android:id="@+id/greenSeekBar"
                 android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:textColor="#0000ff"
-                android:text="Blue: 0"/>
+                android:text="Blue: Color"/>
             <SeekBar
                 android:id="@+id/blueSeekBar"
                 android:layout_width="match_parent"
@@ -103,7 +103,9 @@
     <Spinner
         android:id="@+id/hairStyleSpinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:entries="@array/hairstyle"/>
+        android:entries="@array/hairstyle"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,13 +116,14 @@
         android:layout_marginTop="16sp"/>
 
     <RadioGroup
+        android:id="@+id/faceparts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/hairRadioButton"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"
@@ -129,7 +132,7 @@
 
         <RadioButton
             android:id="@+id/eyesRadioButton"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#000000"
